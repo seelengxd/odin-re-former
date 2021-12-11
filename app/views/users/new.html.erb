@@ -1,1 +1,10 @@
-<h1>Hello from /users/new!</h1>
+<form action="/users" method="POST" accept-charset="UTF-8">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <label>Email:</label>
+    <input type="text" name="user[email]">
+    <label>Username:</label>
+    <input type="text" name="user[username]">
+    <label>Password:</label>
+    <input type="password" name="user[password]">
+    <input type="submit">
+</form>
