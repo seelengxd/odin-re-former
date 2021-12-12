@@ -1,0 +1,14 @@
+<%= form_with model: @user do |form| %>
+<ul>
+<% @user.errors.full_messages.each do |msg| %>
+<li> <%= msg %> </li>
+<% end %>
+</ul>
+<%= form.label :email, "Email:"%>
+<%= form.text_field :email, placeholder: @user.email %>
+<%= form.label :username, "Username:" %>
+<%= form.text_field :username, placeholder: @user.username%>
+<%= form.label :password, "Password:" %>
+<%= form.password_field :password, placeholder: @user.password %>
+<%= form.submit %>
+<% end %>
